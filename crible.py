@@ -65,7 +65,7 @@ def cribleEratosthene_degeu(n):
 
 
 def analyse():
-    params = [10 ^ 2, 10 ^ 3, 10 ^ 4, 10 ^ 5, 10 ^ 6, 10 ^ 7]
+    params = [10 ** 2, 10 ** 3, 10 ** 4, 10 ** 5, 10 ** 6, 10 ** 7]
     functions = [cribleEratosthene, cribleEratosthene_degeu]
     res = []
     for func in functions:
@@ -74,6 +74,7 @@ def analyse():
             start = time.time()
             func(p)
             end = time.time()
+            print(func, p, end - start)
             inner.append(end - start)
         res.append(inner)
 
