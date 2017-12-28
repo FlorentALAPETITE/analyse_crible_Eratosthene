@@ -4,7 +4,6 @@
 # prend un entier en paramètre
 # Par exemple :    cribleEratosthene(120)
 
-# nous
 cribleEratosthene <- function(n){
 	if (n < 2) return(NULL)
 	res <- rep(T, n)
@@ -18,7 +17,9 @@ cribleEratosthene <- function(n){
 	which(res)
 }
 
-# eux
+#Bah Thierno
+#Daniel Ahmed
+#Florent Gaillard
 
 estPremier <- function(entier){
    
@@ -47,7 +48,7 @@ cribleEratosthene_eux <- function(limite){
 
     }
 
-# calcul
+# Calcul temps
 calcul <- function(nous, params){
 	print(nous)
 	inner <- list(length(params))
@@ -70,7 +71,7 @@ calcul <- function(nous, params){
 }
 
 analyse <- function(){
-	params = c(100, 1000, 10000, 100000, 1000000, 10000000)
+	params = c(5,10,50,100,500,1000,5000,10000,50000,100000) 
 	list(calcul(T, params), calcul(F, params))
 }
 

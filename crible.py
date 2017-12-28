@@ -23,50 +23,48 @@ def cribleEratosthene(n):
     return nombresPremiers
 
 
-#  Crible Erathostene
-#  Par Florent Alapetite, Roxane Bellot et Alexandre Boudine
 
-# prend un entier en parametre
-# Par exemple :    cribleEratosthene(120)
+#NOMS DES PARTICIPANTS : BRASSIER / LARDY / LE FALHUN
+
+def creation_tab(n):
+
+    T = [i for i in range(2, n+1)]
+
+    return T
 
 
-# Ce code est absolument crade
-def cribleEratosthene_degeu(n):
+def divisible(i,n):
 
-    # Liste des nombres de 2 a n compris (degeu)
-    listeNombres = []
-    for i in range(1, n):
-        tmp = i + 1
-        listeNombres.append(tmp)
+    if n % i == 0 and i != n:
 
-    nombresPremiers = []  # Liste de retour
+        return(True)
 
-    listePasBon = []
+    else:
 
-    i = 0
+        return(False)
 
-    # Tant que la liste des nombres n'est pas completement parcourue (condition crade)
-    while (len(nombresPremiers) + len(listePasBon)) != len(listeNombres):
-        nombreCourant = listeNombres[i]
+        
 
-        # Test degeu pour savoir si le nombre courant est premier
-        if(nombreCourant not in listePasBon):
-            nombresPremiers.append(nombreCourant)  # Le nombre courant est premier
+def eratosthene(n):
 
-            # Boucle degeu sur tous les nombres
-            for nombre in listeNombres:
+    T = creation_tab(n)
 
-                # Test degeu pour savoir si le nombre parcouru n'est pas premier
-                if nombre != nombreCourant and nombre not in listePasBon and nombre % nombreCourant == 0:
-                    listePasBon.append(nombre)
-        i = i + 1
+    for i in T : 
 
-    return nombresPremiers
+        for n in T : 
 
+            if divisible(i,n):
+
+                T.remove(n)
+
+    return T
+
+
+# Fonction d'analyse de temps d'exécution
 
 def analyse():
-    params = [10 ** 2, 10 ** 3, 10 ** 4, 10 ** 5, 10 ** 6, 10 ** 7]
-    functions = [cribleEratosthene, cribleEratosthene_degeu]
+    params = [5,10,50,100,500,1000,5000,10000,50000,100000] 
+    functions = [cribleEratosthene, eratosthene]
     res = []
     for func in functions:
         inner = []
