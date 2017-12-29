@@ -70,9 +70,7 @@ calcul <- function(nous, params){
 	inner
 }
 
-analyse <- function(){
-	params = c(5,10,50,100,500,1000,5000,10000,50000,100000) 
+analyse <- function(params){	
 	list(calcul(T, params), calcul(F, params))
 }
 
-analyse()

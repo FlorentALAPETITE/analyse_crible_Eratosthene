@@ -14,4 +14,14 @@
 # Get matplotlib
 
 * $ sudo apt-get install python3-tk
-* $ pip3 install matplotlib
+* $ sudo pip3 install matplotlib
+
+
+# Lancer analyse 
+
+* python3 analyse.py
+
+
+# Modifier les paramètres de l'analyse 
+
+* Dans le fichier analyse.py : modifier l'appel final à **analyse_and_plot()** avec une liste différente. 

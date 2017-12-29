@@ -62,8 +62,7 @@ def eratosthene(n):
 
 # Fonction d'analyse de temps d'exécution
 
-def analyse():
-    params = [5,10,50,100,500,1000,5000,10000,50000,100000] 
+def analyse(params):
     functions = [cribleEratosthene, eratosthene]
     res = []
     for func in functions:
