@@ -62,6 +62,9 @@ end
 #Note : After the 1st execution of a function taking more than 60secondes, next calls won't be done, and result will be 60 
 
 function crible(l)
+	#load tic toc
+	elapsed_time(cribleEratosthene,5)
+
 	res = []
 	our = []
 	their = []

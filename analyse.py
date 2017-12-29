@@ -26,6 +26,7 @@ def analyse_and_plot(listeParams):
 
 	plt.show()
 
+	print(res_R,res_julia, res_python)
 
 def analyse_julia(listeParams):
 	j.include("crible.jl")
